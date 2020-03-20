@@ -27889,6 +27889,13 @@ var _ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
+var messages = __webpack_require__(/*! ./say-hello */ "./src/say-hello.js");
+
+console.log(messages.mean());
+console.log(messages.nice());
+console.log(messages.nooch());
+console.log(_.chunk(['a', 'b', 'c', 'd'], 3));
+
 var sayHello = function sayHello() {
   console.log("hello");
 };
@@ -27897,6 +27904,33 @@ $("#changeColor").on('click', function (e) {
   $(_this).css("background-color", "pink");
 });
 sayHello();
+
+/***/ }),
+
+/***/ "./src/say-hello.js":
+/*!**************************!*\
+  !*** ./src/say-hello.js ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var nice = function nice() {
+  return "This is a nice message";
+};
+
+var mean = function mean() {
+  return "This is a mean message";
+};
+
+var nooch = function nooch() {
+  return "This is a nooch message";
+};
+
+module.exports = {
+  nice: nice,
+  mean: mean,
+  nooch: nooch
+};
 
 /***/ })
 
